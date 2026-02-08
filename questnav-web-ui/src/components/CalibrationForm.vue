@@ -63,7 +63,9 @@
       <pre>
 {{ rotationCode }}
 {{ translationCode }}
-public static final Pose3d questNavToRobot = new Transform3d(questToRobotTranslation, questToRobotRotation);
+// First, Declare our geometrical transform from the robot center to the Quest
+Transform3d QUEST_TO_ROBOT = new Transform3d(questToRobotTranslation, questToRobotRotation);
+Transform3d ROBOT_TO_QUEST = QUEST_TO_ROBOT.inverse();
       </pre>
     </div>
   </div>
